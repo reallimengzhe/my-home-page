@@ -1,0 +1,89 @@
+/* common start */
+
+.content-bg {
+  background-color: rgba(var(--content-bg-color), 0.8);
+  background-image: url(/grid.svg);
+  background-position: 10px 10px;
+  background-size: 32px;
+}
+
+.dark .content-bg {
+  background-image: url(/grid-dark.svg);
+}
+
+/* common end */
+/* nav bar start */
+.nav_bar {
+  background-color: var(--nav-bg-color);
+}
+
+.nav_bar-item.is-active,
+.nav_bar-item:hover {
+  background-color: rgba(var(--content-bg-color), 0.8);
+}
+/* nav bar end */
+
+/* home start */
+.home-project-item,
+.home-post-item {
+  background-color: rgb(var(--bg-color));
+}
+
+.home-project-item-tech {
+  border: 4px solid rgb(var(--bg-color));
+  background-color: rgb(var(--content-bg-color));
+}
+/* home end */
+
+.page_project-item-tech {
+  border: 4px solid rgb(var(--content-bg-color));
+  background-color: rgb(var(--bg-color));
+}
+
+.home-project-item h5 .arco-icon,
+.page_project-item h5 .arco-icon,
+.home-post-item .arco-icon,
+.page_post-item .arco-icon {
+  opacity: 0;
+}
+
+.home-project-item:hover h5 .arco-icon,
+.page_project-item:hover h5 .arco-icon,
+.home-post-item:hover .arco-icon,
+.page_post-item:hover .arco-icon {
+  opacity: 1;
+}
+
+.project_detail.arco-modal {
+  background-color: rgb(var(--bg-color));
+}
+
+.project_detail .arco-modal-content {
+  padding: 0;
+}
+
+/* .test {
+  color:#B2C9E7
+  #93B2DA
+  #748CCF
+  #5566C4
+  #3740B9
+  #1F1AAF
+  #002FA7
+  #002885
+  #002262
+  #001C40
+  #00161E;
+
+  color: #B2FFFF
+  #9DFFFF
+  #88FFFF
+  #73FFFF
+  #5DFFFF
+  #48FFFF
+  #4AFFFF
+  #3BCCCC
+  #2C9999
+  #1E6666
+  #0F3333; 
+} */

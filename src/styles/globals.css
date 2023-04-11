@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color-7: 0, 38, 135;
+  --primary-color-600: 0, 47, 167; /* main */
+  --primary-color-5: 48, 86, 183;
+  --primary-color-400: 96, 125, 199;
+  --primary-color-3: 144, 164, 215;
+  --primary-color-200: 190, 203, 232;
+  --primary-color-1: 227, 231, 243;
+
+  --bg-color: 255, 255, 255;
+  --content-bg-color: 248, 250, 252;
+  --nav-bg-color: rgba(var(--bg-color), 0);
+
+  --text-color: 48, 49, 51;
+  --text-secondary-color: 100, 116, 139;
+}
+
+.dark {
+  --primary-color-600: 74, 255, 255; /* main */
+  --primary-color-400: 93, 255, 255;
+  --primary-color-200: 115, 255, 255;
+
+  --bg-color: 20, 20, 20;
+  --content-bg-color: 20, 24, 28;
+  --nav-bg-color: rgba(var(--bg-color), 0);
+
+  --text-color: 229, 234, 243;
+  --text-secondary-color: 100, 116, 139;
+}
+
+* {
+  border-color: rgba(var(--primary-color-600), 0.08);
+}
+
+html {
+  color: rgb(var(--text-color));
+  background-color: rgb(var(--bg-color));
+}
+
+/* a {
+  color: rgb(var(--primary-color-600));
+} */
+
+a:hover {
+  color: rgb(var(--primary-color-600));
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+  }
+} */
+
+/* tailwind css reset */
+html body .shadow,
+html body .hover\:shadow:hover {
+  --tw-shadow: 0 10px 20px rgba(var(--primary-color-600), 0.06) !important;
+}
+
+/* arco design reset */
+body {
+  --color-text-1: rgb(var(--text-color)) !important;
+  --color-fill-2: rgb(var(--content-bg-color)) !important;
+}
