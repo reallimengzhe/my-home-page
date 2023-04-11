@@ -2,9 +2,6 @@ import Link from 'next/link'
 import { useRef } from 'react'
 import { IconRight, IconMore, IconExpand } from '@arco-design/web-react/icon'
 
-import NavBar from '@/components/nav-bar'
-import LayoutHeader from '@/components/layout-header'
-import LayoutFooter from '@/components/layout-footer'
 import ProjectViewer from '@/components/project-viewer'
 
 const projects = require('@/data/project.json')
@@ -19,9 +16,6 @@ export default function Home() {
 
   return (
     <main className="home text-sm">
-      <NavBar />
-
-      <LayoutHeader />
 
       <div className="home-main relative px-8" style={{ marginTop: '-32px' }}>
         <div className="home-project content-bg mx-auto mb-8 max-w-7xl rounded-xl border backdrop-blur-sm">
@@ -188,7 +182,6 @@ export default function Home() {
         </div>
       </div>
 
-      <LayoutFooter />
 
       <ProjectViewer ref={ProjectViewerRef} />
     </main>

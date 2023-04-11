@@ -5,11 +5,11 @@ import { useRouter } from 'next/router'
 import ThemeSwitcher from './theme-switcher'
 
 export default function NavBar() {
-  const { asPath } = useRouter()
+  const { pathname } = useRouter()
 
   return (
     <div className="nav_bar fixed top-0 z-50 h-16 w-full border-b px-8 backdrop-blur">
-      <div className="nav_bar-main flex h-full max-w-7xl items-center mx-auto">
+      <div className="nav_bar-main mx-auto flex h-full max-w-7xl items-center">
         <Link href="/">
           <img src="/logo.svg" alt="Logo" className="h-7 w-auto" />
         </Link>
@@ -17,7 +17,7 @@ export default function NavBar() {
         <Link
           href="/project"
           className={`nav_bar-item ml-auto rounded border px-4 py-1 text-xs ${
-            asPath === '/project' ? 'is-active' : ''
+            pathname === '/project' ? 'is-active' : ''
           }`}
         >
           项目
@@ -25,7 +25,7 @@ export default function NavBar() {
         <Link
           href="/post"
           className={`nav_bar-item ml-4 rounded border px-4 py-1 text-xs ${
-            asPath === '/post' ? 'is-active' : ''
+            pathname === '/post' ? 'is-active' : ''
           }`}
         >
           文章
