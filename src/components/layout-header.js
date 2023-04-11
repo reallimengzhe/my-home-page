@@ -3,9 +3,9 @@ import { IconCode, IconShake, IconEmail } from '@arco-design/web-react/icon'
 import { useEffect, useState } from 'react'
 
 export default function LayoutHeader() {
-  const isBrowser = typeof window === 'object'
-
   const [isDark, setDark] = useState(false)
+
+  useEffect(onHtmlClassChange, [])
 
   useEffect(() => {
     const observer = new MutationObserver(onHtmlClassChange)

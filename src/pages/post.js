@@ -12,7 +12,7 @@ export default function Project() {
 
       <LayoutHeader />
 
-      <div className="px-8">
+      <div className="px-8 relative">
         <div
           className="page_post-main mx-auto grid max-w-7xl gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
           style={{ marginTop: '-32px' }}

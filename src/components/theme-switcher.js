@@ -6,7 +6,6 @@ export default function NavBar() {
   const [isDark, setDark] = useState(false)
 
   useEffect(() => {
-    console.log('useEffect')
     setTheme(localStorage.theme)
   }, [])
 

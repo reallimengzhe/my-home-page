@@ -7,7 +7,6 @@ export default forwardRef((props, ref) => {
 
   useImperativeHandle(ref, () => ({
     show: project => {
-      console.log(project)
       setCurrentProject(project)
       setVisible(true)
     },
