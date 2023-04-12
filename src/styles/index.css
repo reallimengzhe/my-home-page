@@ -11,6 +11,10 @@
   background-image: url(/grid-dark.svg);
 }
 
+.text-secondary {
+  color: rgb(var(--text-secondary-color));
+}
+
 /* common end */
 /* nav bar start */
 .nav_bar {
@@ -60,6 +64,10 @@
 
 .project_detail .arco-modal-content {
   padding: 0;
+}
+
+.arco-modal .arco-modal-close-icon {
+  z-index: 1;
 }
 
 /* .test {

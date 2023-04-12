@@ -15,7 +15,7 @@ export default function Home() {
   }
 
   return (
-    <main className="home relative px-8 text-sm">
+    <main className="home relative px-4 text-sm">
       <div
         className="home-project content-bg mx-auto mb-8 max-w-7xl rounded-xl border backdrop-blur-sm"
         style={{ marginTop: '-32px' }}
@@ -25,55 +25,58 @@ export default function Home() {
 
           <Link
             href="/project"
-            className="ml-auto flex items-center text-slate-400"
+            className="text-secondary ml-auto flex items-center"
           >
             <span className="text-xs"> 查看更多 </span>
             <IconRight className="ml-1" />
           </Link>
         </div>
         <div className="grid gap-4 px-4 py-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map(project => {
-            return (
-              <div
-                className="home-project-item rounded-md border px-4 py-4 transition duration-300 hover:-translate-y-1 hover:shadow"
-                key={project.name}
-                onClick={() => onViewProject(project)}
-              >
-                <h5 className="mb-2">
-                  <span>{project.name}</span>
-                  <IconExpand className="ml-2 transition-opacity duration-300" />
-                </h5>
-                <p className="mb-4 text-slate-400"> {project.type} </p>
-                {/* <p className="mb-4"> {project.orgination} </p> */}
-                <div className="flex">
-                  {project.techStack.map((tech, index) => {
-                    return (
-                      <div
-                        className="home-project-item-tech flex h-8 w-8 items-center justify-center rounded-full"
-                        style={{
-                          marginLeft: index == 0 ? '-4px' : '-8px',
-                          zIndex: 10 - index,
-                        }}
-                        key={tech}
-                      >
-                        <img
-                          src={'/icon/' + tech + '.svg'}
-                          className="h-7/12 w-7/12"
-                        />
-                      </div>
-                    )
-                  })}
+          {projects
+            .filter(item => item.show)
+            .slice(0, 6)
+            .map(project => {
+              return (
+                <div
+                  className="home-project-item rounded-md border px-4 py-4 transition duration-300 hover:-translate-y-1 hover:shadow"
+                  key={project.name}
+                  onClick={() => onViewProject(project)}
+                >
+                  <h5 className="mb-2">
+                    <span>{project.name}</span>
+                    <IconExpand className="ml-2 transition-opacity duration-300" />
+                  </h5>
+                  <p className="text-secondary mb-4"> {project.type} </p>
+                  {/* <p className="mb-4"> {project.orgination} </p> */}
+                  <div className="flex">
+                    {project.techStack.map((tech, index) => {
+                      return (
+                        <div
+                          className="home-project-item-tech flex h-8 w-8 items-center justify-center rounded-full"
+                          style={{
+                            marginLeft: index == 0 ? '-4px' : '-8px',
+                            zIndex: 10 - index,
+                          }}
+                          key={tech}
+                        >
+                          <img
+                            src={'/icon/' + tech + '.svg'}
+                            className="h-7/12 w-7/12"
+                          />
+                        </div>
+                      )
+                    })}
 
-                  <div
-                    className="home-project-item-tech flex h-8 w-8 items-center justify-center rounded-full"
-                    style={{ marginLeft: '-8px' }}
-                  >
-                    <IconMore />
+                    <div
+                      className="home-project-item-tech flex h-8 w-8 items-center justify-center rounded-full"
+                      style={{ marginLeft: '-8px' }}
+                    >
+                      <IconMore />
+                    </div>
                   </div>
                 </div>
-              </div>
-            )
-          })}
+              )
+            })}
         </div>
       </div>
 
@@ -81,7 +84,7 @@ export default function Home() {
         <div className="mb-8 md:mb-0">
           <div className="home-university content-bg mb-8 rounded-xl border">
             <div className="home-university-title flex border-b px-4 py-4">
-              我的母校
+              我的背景
             </div>
 
             <div className="px-4 py-4">
@@ -95,7 +98,7 @@ export default function Home() {
                 </Link>
                 <div className="ml-4 flex-1 border-b pb-6 pt-1">
                   <p className="pb-2">郑州轻工业大学</p>
-                  <p>视觉传达设计本科</p>
+                  <p>视觉传达设计（本科）</p>
                 </div>
               </div>
 
@@ -109,7 +112,7 @@ export default function Home() {
                 </Link>
                 <div className="ml-4 flex-1 py-1">
                   <p className="pb-2">伦敦城市大学</p>
-                  <p>工商管理硕士</p>
+                  <p>工商管理硕士（研究生）</p>
                 </div>
               </div>
             </div>
@@ -146,7 +149,7 @@ export default function Home() {
             <span> 最新动态 </span>
             <Link
               href="/post"
-              className="ml-auto flex items-center text-slate-400"
+              className="text-secondary ml-auto flex items-center"
             >
               <span className="text-xs"> 查看更多 </span>
               <IconRight className="ml-1" />
@@ -154,7 +157,7 @@ export default function Home() {
           </div>
 
           <div className="home-post-content p-4">
-            {posts.map((post, index) => {
+            {posts.slice(0, 5).map((post, index) => {
               return (
                 <div
                   className={`flex ${index < posts.length - 1 && 'mb-4'}`}
@@ -170,7 +173,7 @@ export default function Home() {
                       <span>发布了文章： {post.title}</span>
                       <IconRight className="ml-2 transition-opacity duration-300" />
                     </div>
-                    <p className="text-slate-400"> {post.time} </p>
+                    <p className="text-secondary"> {post.time} </p>
                   </Link>
                 </div>
               )

@@ -49,6 +49,7 @@ module.exports = {
         950: '#0F3333',
       },
       slate: colors.slate,
+      black: colors.black,
     },
   },
   plugins: [],
