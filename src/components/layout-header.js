@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { IconCode, IconShake, IconEmail } from '@arco-design/web-react/icon'
 import { useEffect, useState } from 'react'
 
@@ -21,7 +20,7 @@ export default function LayoutHeader() {
   }
 
   return (
-    <header className="layout-header relative overflow-hidden px-4 pb-48 pt-56">
+    <header className="layout-header relative overflow-hidden px-4 pb-32 pt-40 md:pb-48 md:pt-56">
       <video
         src={isDark ? '/header/dark.mp4' : '/header/light.mp4'}
         loop

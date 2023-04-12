@@ -22,9 +22,13 @@ export default forwardRef((props, ref) => {
       onCancel={() => setVisible(false)}
       className="project_detail w-4/5 max-w-screen-lg overflow-hidden rounded-xl"
     >
-      <div className="md:flex" style={{ height: '60vh' }}>
+      <div className="md:flex overflow-hidden" style={{ height: '60vh' }}>
         <div className="h-2/5 w-full md:h-full md:w-2/3">
-          <Carousel className="h-full w-full bg-black" moveSpeed={300}>
+          <Carousel
+            className="h-full w-full bg-black"
+            moveSpeed={300}
+            autoFocus={false}
+          >
             {currentProject.img.map((src, index) => (
               <div key={index}>
                 <img
@@ -36,7 +40,7 @@ export default forwardRef((props, ref) => {
             ))}
           </Carousel>
         </div>
-        <aside className="content-bg h-3/5 w-full overflow-y-auto p-4 md:h-full md:w-1/3 md:p-8">
+        <aside className="content-bg h-3/5 w-full overflow-y-auto p-4 md:h-full md:w-1/3 md:p-8 rounded-xl">
           <h3 className="mb-4 text-lg font-bold">{currentProject.name}</h3>
           <h5 className="text-secondary mb-2">项目简介</h5>
           <p className="mb-4">{currentProject.intro}</p>

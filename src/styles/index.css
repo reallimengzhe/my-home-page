@@ -7,6 +7,10 @@
   background-size: 32px;
 }
 
+.dark {
+  color-scheme: dark;
+}
+
 .dark .content-bg {
   background-image: url(/grid-dark.svg);
 }
