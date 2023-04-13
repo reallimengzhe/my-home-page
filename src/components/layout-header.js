@@ -20,14 +20,10 @@ export default function LayoutHeader() {
   }
 
   return (
-    <header className="layout_header relative overflow-hidden px-4 pb-32 pt-40 md:pb-48 md:pt-56">
-      <img
-        src="/avatar.png"
-        className="mx-auto mb-4 h-20 w-20 rounded-full"
-        draggable={false}
-      />
-      <h5 className="mb-8 text-center text-lg">李孟哲</h5>
-      <div className="text-center md:flex md:items-center md:justify-center">
+    <header className="layout_header overflow-hidden px-4 pb-32 pt-40 md:pb-48 md:pt-56">
+      <img src="/avatar.png" className="mx-auto mb-4 h-20 w-20 rounded-full relative z-10" draggable={false} />
+      <h5 className="mb-8 text-center text-lg relative z-10">李孟哲</h5>
+      <div className="text-center md:flex md:items-center md:justify-center relative z-10">
         <div className="mb-2 md:mb-0 md:mr-8">
           <IconCode className="mr-2" />
           <span>前端开发工程师</span>

@@ -1,5 +1,4 @@
 import '@/styles/globals.css'
-import '@/styles/index.css'
 import '@/styles/theme-switcher.css'
 
 import '@arco-design/web-react/dist/css/arco.css'
@@ -13,12 +12,9 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>李孟哲</title>
+        <title>李孟哲的主页</title>
         <meta name="description" content="李孟哲的个人博客" />
-        <meta
-          name="keywords"
-          content="李孟哲, li mengzhe, limengzhe, 前端开发, Web develop"
-        />
+        <meta name="keywords" content="李孟哲, li mengzhe, limengzhe, 前端开发, Web develop" />
       </Head>
       <NavBar />
       <LayoutHeader />
