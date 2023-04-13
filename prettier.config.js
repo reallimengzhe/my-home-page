@@ -3,5 +3,6 @@ module.exports = {
   tailwindConfig: 'tailwind.config.js',
   semi: false,
   singleQuote: true,
-  arrowParens: "avoid",
+  arrowParens: 'avoid',
+  printWidth: 140,
 }

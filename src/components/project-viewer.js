@@ -20,7 +20,7 @@ export default forwardRef((props, ref) => {
       unmountOnExit={true}
       onOk={() => setVisible(false)}
       onCancel={() => setVisible(false)}
-      className="project_detail w-4/5 max-w-screen-lg overflow-hidden rounded-xl"
+      className="project_viewer w-4/5 max-w-screen-lg overflow-hidden rounded-xl"
     >
       <div className="md:flex overflow-hidden" style={{ height: '60vh' }}>
         <div className="h-2/5 w-full md:h-full md:w-2/3">

@@ -13,7 +13,6 @@
 
   --bg-color: 255, 255, 255;
   --content-bg-color: 248, 250, 252;
-  --nav-bg-color: rgba(var(--bg-color), 0);
 
   --text-color: 48, 49, 51;
   --text-secondary-color: 100, 116, 139;
@@ -26,7 +25,6 @@
 
   --bg-color: 20, 20, 20;
   --content-bg-color: 20, 24, 28;
-  --nav-bg-color: rgba(var(--bg-color), 0);
 
   --text-color: 229, 234, 243;
   --text-secondary-color: 100, 116, 139;

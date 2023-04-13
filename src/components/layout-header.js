@@ -20,19 +20,10 @@ export default function LayoutHeader() {
   }
 
   return (
-    <header className="layout-header relative overflow-hidden px-4 pb-32 pt-40 md:pb-48 md:pt-56">
-      <video
-        src={isDark ? '/header/dark.mp4' : '/header/light.mp4'}
-        loop
-        muted
-        autoPlay
-        playsInline
-        className="absolute left-0 top-0 h-full w-full object-cover opacity-60"
-        style={{ zIndex: -1 }}
-      />
+    <header className="layout_header relative overflow-hidden px-4 pb-32 pt-40 md:pb-48 md:pt-56">
       <img
         src="/avatar.png"
-        className="mx-auto mb-4 h-20 w-20 rounded-full "
+        className="mx-auto mb-4 h-20 w-20 rounded-full"
         draggable={false}
       />
       <h5 className="mb-8 text-center text-lg">李孟哲</h5>

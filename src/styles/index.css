@@ -1,14 +1,14 @@
 /* common start */
 
+.dark {
+  color-scheme: dark;
+}
+
 .content-bg {
   background-color: rgba(var(--content-bg-color), 0.8);
   background-image: url(/grid.svg);
   background-position: 10px 10px;
   background-size: 32px;
-}
-
-.dark {
-  color-scheme: dark;
 }
 
 .dark .content-bg {
@@ -22,7 +22,7 @@
 /* common end */
 /* nav bar start */
 .nav_bar {
-  background-color: var(--nav-bg-color);
+  background-color: rgba(var(--bg-color), 0.25);
 }
 
 .nav_bar-item.is-active,
@@ -62,11 +62,11 @@
   opacity: 1;
 }
 
-.project_detail.arco-modal {
+.project_viewer.arco-modal {
   background-color: rgb(var(--bg-color));
 }
 
-.project_detail .arco-modal-content {
+.project_viewer .arco-modal-content {
   padding: 0;
 }
 
@@ -74,6 +74,39 @@
   z-index: 1;
 }
 
+.layout_header {
+  background-image: radial-gradient(closest-side, rgba(0, 47, 167, 0.4), transparent),
+    radial-gradient(closest-side, rgba(190, 170, 240, 1), transparent), radial-gradient(closest-side, rgba(74, 255, 255, 1), transparent);
+  background-size: var(--header-light-size);
+  background-position: var(--header-light-position);
+  background-repeat: no-repeat;
+  animation: 15s lightTrail infinite;
+}
+
+:root {
+  --header-light-size: 120% 240%, 160% 240%, 120% 240%;
+  --header-light-position: top 150% left 320%, top -10% left 160%, bottom 80% right 260%;
+}
+
+@keyframes lightTrail {
+  0%,
+  100% {
+    /* background-size: var(--header-light-size); */
+    background-position: var(--header-light-position);
+  }
+  25% {
+    /* background-size: 100% 200%, 140% 240%, 100% 200%; */
+    background-position: top 150% left 240%, top 30% left 130%, bottom 120% right 300%;
+  }
+  50% {
+    /* background-size: 80% 280%, 120% 220%, 80% 280%; */
+    background-position: top 140% left 80%, top -10% left 100%, bottom 50% right 400%;
+  }
+  75% {
+    /* background-size: 100% 200%, 140% 240%, 100% 200%; */
+    background-position: top 150% left 280%, top 0% left 130%, bottom 100% right 300%;
+  }
+}
 /* .test {
   color:#B2C9E7
   #93B2DA
